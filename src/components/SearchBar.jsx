@@ -57,20 +57,20 @@ function SearchBar({ onSelectCity }) {
       )
   }
 
-  // function handleSelectCity(city) {
-  //   setSelectedCity(city)
-  //   setCities([])
-  // }
-function handleSelectCity(city) {
-  setSelectedCity(city)
-  setCities([])
-  setQuery("")
-  onSelectCity(city)
-}
+  function handleSelectCity(city) {
+    setSelectedCity(city)
+    setCities([])
+    onSelectCity(city)
+  }
+
   return (
     <div className="w-full max-w-xl mx-auto px-4">
+
       <div className="relative">
-        <div className="flex items-center gap-2 bg-white p-2 rounded-xl shadow-sm">
+
+        {/* Search Input */}
+        <div className="flex items-center gap-2 bg-weather-surface border border-weather-border p-2 rounded-2xl">
+
           <input
             type="text"
             value={query}
@@ -79,56 +79,67 @@ function handleSelectCity(city) {
               setSelectedCity(null)
             }}
             placeholder="Enter city name..."
-            className="flex-1 p-3 outline-none"
+            className="flex-1 min-w-0 bg-transparent p-3 outline-none text-weather-text placeholder:text-weather-muted"
           />
+
         </div>
 
+        {/* Loading */}
         {loading && (
-          <p className="mt-2 text-sm text-slate-500">
+          <p className="mt-2 text-sm text-weather-muted">
             Searching...
           </p>
         )}
 
+        {/* Error */}
         {error && (
           <p className="mt-2 text-sm text-red-500">
             {error}
           </p>
         )}
 
+        {/* City Suggestions */}
         {cities.length > 0 && (
-          <div className="absolute top-full overflow-y-scroll max-h-50 h-auto  left-0 right-0 mt-1 bg-white rounded-xl shadow-lg z-10">
+          <div className="absolute top-full left-0 right-0 mt-2 max-h-52 overflow-y-auto bg-weather-surface border border-weather-border rounded-2xl shadow-lg z-10">
+
             {cities.map((city) => (
               <button
                 key={city.id}
                 type="button"
                 onClick={() => handleSelectCity(city)}
-                className="w-full flex items-center gap-3 p-4 text-left hover:bg-slate-100"
+                className="w-full flex items-center gap-3 p-4 text-left hover:bg-weather-sidebar transition-colors"
               >
+
                 <span className="text-2xl">
                   {getCountryFlag(city.country_code)}
                 </span>
 
                 <div>
-                  <p className="font-semibold text-slate-800">
+                  <p className="font-semibold text-weather-text">
                     {city.name}
                   </p>
 
-                  <p className="text-sm text-slate-500">
+                  <p className="text-sm text-weather-muted">
                     {city.admin1 ? `${city.admin1}, ` : ""}
                     {city.country}
                   </p>
                 </div>
+
               </button>
             ))}
+
           </div>
         )}
 
+        {/* Selected City */}
         {selectedCity && (
-          <p className="mt-3 text-sm text-slate-600">
+          <p className="mt-3 text-sm text-weather-muted">
             Selected: {selectedCity.name}, {selectedCity.country}
           </p>
         )}
+
       </div>
+
     </div>
   )
 }

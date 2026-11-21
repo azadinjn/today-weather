@@ -1,1 +1,28 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 @import "tailwindcss";
+
+@theme {
+  /* Typography */
+  --font-sans: "Poppins", sans-serif;
+
+  /* Backgrounds */
+  --color-weather-bg: #E9E9E9;
+  --color-weather-surface: #FAFAFA;
+  --color-weather-sidebar: #F6F6F6;
+
+  /* Text */
+  --color-weather-text: #696969;
+  --color-weather-muted: #A6A6A6;
+
+  /* Borders */
+  --color-weather-border: #DCDCDC;
+}
+
+@layer base {
+  body {
+    @apply bg-weather-bg font-sans text-weather-text;
+  }
+}

@@ -1,39 +1,62 @@
+
 function WeatherDetails({ weather }) {
-  console.log(weather)
   if (!weather) {
     return null
   }
-  return (
-    <section className="mt-6">
 
-      <h2 className="text-xl font-bold text-slate-800 mb-4">
+  const details = [
+    {
+      id: 1,
+      label: "Humidity",
+      value: `${weather.current.relative_humidity_2m}%`,
+      icon: "💧",
+    },
+    {
+      id: 2,
+      label: "Wind Speed",
+      value: `${weather.current.wind_speed_10m} km/h`,
+      icon: "💨",
+    },
+    {
+      id: 3,
+      label: "Feels Like",
+      value: `${Math.round(weather.current.apparent_temperature)}°`,
+      icon: "🌡️",
+    },
+    {
+      id: 4,
+      label: "UV Index",
+      value: weather.current.uv_index,
+      icon: "☀️",
+    },
+  ]
+
+  return (
+    <section>
+      <h2 className="text-lg font-medium mb-5">
         Weather Details
       </h2>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-3">
+        {details.map((detail) => (
+          <div
+            key={detail.id}
+            className="bg-weather-surface rounded-2xl p-4"
+          >
+            <div className="text-2xl mb-3">
+              {detail.icon}
+            </div>
 
-        <div className="bg-white p-5 rounded-xl shadow-sm">
-          <p className="text-sm text-slate-500">Humidity</p>
-          <h3 className="text-2xl font-bold mt-2">{weather.current.relative_humidity_2m}%</h3>
-        </div>
+            <p className="text-xs text-weather-muted">
+              {detail.label}
+            </p>
 
-        <div className="bg-white p-5 rounded-xl shadow-sm">
-          <p className="text-sm text-slate-500">Wind Speed</p>
-          <h3 className="text-2xl font-bold mt-2">{weather.current.wind_speed_10m} km/h</h3>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl shadow-sm">
-          <p className="text-sm text-slate-500">Feels Like</p>
-          <h3 className="text-2xl font-bold mt-2">{Math.round(weather.current.apparent_temperature)}°</h3>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl shadow-sm">
-          <p className="text-sm text-slate-500">UV Index</p>
-          <h3 className="text-2xl font-bold mt-2">{weather.current.uv_index}</h3>
-        </div>
-
+            <p className="text-lg font-medium mt-1">
+              {detail.value}
+            </p>
+          </div>
+        ))}
       </div>
-
     </section>
   )
 }

@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import CurrentWeather from "./components/CurrentWeather";
-import WeatherDetails from "./components/WeatherDetails";
 import WeeklyForecast from "./components/WeeklyForecast";
+import Sidebar from "./components/Sidebar";
 
 import { getWeather } from "./services/weatherApi";
 
@@ -53,26 +53,42 @@ function App() {
     };
   }, [selectedCity]);
 
-  return (
-    <main className="min-h-screen bg-slate-100">
-      {/* Header */}
-      <Header />
+ 
+   
+return (
+  <main className="min-h-screen p-4 md:p-8">
 
-      {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 py-6">
-        {/* Search */}
+    <Header />
+
+    <div className="max-w-7xl mx-auto mt-6">
+
+      <div className="mb-6">
         <SearchBar onSelectCity={setSelectedCity} />
+      </div>
 
-        {/* Weather Information */}
-        <div className="mt-8">
-          <CurrentWeather weather={weather} city={selectedCity} />
+      <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-6">
 
-          <WeatherDetails weather={weather} />
+        {/* Main Area */}
+        <section className="bg-weather-surface rounded-3xl p-5 md:p-8">
+
+          <CurrentWeather
+            weather={weather}
+            city={selectedCity}
+          />
 
           <WeeklyForecast weather={weather} />
-        </div>
+
+        </section>
+
+        {/* Sidebar */}
+        <Sidebar weather={weather} />
+
       </div>
-    </main>
+    </div>
+
+  </main>
+
+
   );
 }
 
