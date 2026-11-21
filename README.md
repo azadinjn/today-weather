@@ -22,9 +22,9 @@
 
 <!-- Replace these paths with your actual screenshots -->
 
-<p align="center">
+
  ![Today Weather Desktop Preview](./screenshots/desktop.png)
-</p>
+
 
 <p align="center">
   <em>Desktop Preview</em>
