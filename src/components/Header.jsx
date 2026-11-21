@@ -1,13 +1,16 @@
+
 function Header() {
   return (
-    <header className="flex items-center justify-between p-6">
-      <h1 className="text-2xl font-bold text-slate-800">
+    <header className="max-w-7xl mx-auto flex items-center justify-between px-2 py-3">
+
+      <h1 className="text-xl md:text-2xl font-semibold tracking-tight">
         Today Weather
       </h1>
 
-      <span className="text-sm text-slate-500">
-        Weather Forecast
-      </span>
+      <p className="text-sm text-weather-muted hidden sm:block">
+        Your daily weather forecast
+      </p>
+
     </header>
   )
 }
