@@ -28,7 +28,7 @@ function WeeklyForecast({ weather }) {
               day={new Date(date).toLocaleDateString("en-US", {
                 weekday: "short",
               })}
-              icon={weatherInfo.icon}
+              weatherIcon={weatherInfo.icon}
               description={weatherInfo.description}
               maxTemp={Math.round(weather.daily.temperature_2m_max[index])}
               minTemp={Math.round(weather.daily.temperature_2m_min[index])}
