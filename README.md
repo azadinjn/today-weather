@@ -23,7 +23,7 @@
 <!-- Replace these paths with your actual screenshots -->
 
 <p align="center">
-  <img src="./screenshots/desktop.png" alt="Today Weather Desktop Preview" width="85%" />
+ ![Today Weather Desktop Preview](./screenshots/desktop.png)
 </p>
 
 <p align="center">
