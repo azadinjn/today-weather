@@ -158,7 +158,7 @@ Building Today Weather helped me practice and improve my skills in:
 The application is deployed on **Vercel**.
 
 <p align="center">
-  <a href="[YOUR_VERCEL_URL](https://today-weather-pi.vercel.app/)">
+  <a href="https://today-weather-pi.vercel.app/">
     <img src="https://img.shields.io/badge/Visit_Live_App-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Visit Live App" />
   </a>
 </p>
