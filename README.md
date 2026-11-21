@@ -1,121 +1,91 @@
-# Today Weather
+#  Today Weather
 
-A modern and responsive weather application that helps users explore current weather conditions and 7-day forecasts for cities around the world.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-2026-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-2026-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+</p>
 
-Built with React, Vite, Tailwind CSS, and the Open-Meteo API.
+<p align="center">
+  A clean, modern, and responsive weather application that helps you explore current weather conditions and 7-day forecasts for cities around the world.
+</p>
 
----
-
-## Screenshots
-
-<!-- Add your screenshots inside the screenshots/ folder -->
-
-### Desktop Preview
-
-![Today Weather - Desktop](./screenshots/desktop.png)
-
-### Mobile Preview
-
-![Today Weather - Mobile](./screenshots/mobile.png)
+<p align="center">
+  <a href="[YOUR_VERCEL_URL](https://today-weather-pi.vercel.app/)">Live Demo</a> •
+  <a href="[YOUR_GITHUB_REPOSITORY_URL](https://github.com/azadinjn/today-weather)">Source Code</a>
+</p>
 
 ---
 
-## Features
+##  Preview
 
-- **City Search:** Search for cities around the world with autocomplete suggestions.
-- **Current Weather:** View current temperature and weather conditions.
-- **7-Day Forecast:** Explore daily weather forecasts, including maximum and minimum temperatures.
-- **Weather Details:** Get additional information such as humidity, wind speed, feels-like temperature, and UV index.
-- **Loading States:** Skeleton loading UI while weather data is being fetched.
-- **Error Handling:** Handle API errors and unsuccessful searches.
-- **Responsive Design:** Optimized for desktop, tablet, and mobile screens.
-- **Dynamic Weather Icons:** Weather conditions are displayed using Lucide icons.
+<!-- Replace these paths with your actual screenshots -->
+
+<p align="center">
+  <img src="./screenshots/desktop.png" alt="Today Weather Desktop Preview" width="85%" />
+</p>
+
+<p align="center">
+  <em>Desktop Preview</em>
+</p>
+
+<p align="center">
+  <img src="./screenshots/mobile.png" alt="Today Weather Mobile Preview" width="35%" />
+</p>
+
+<p align="center">
+  <em>Mobile Preview</em>
+</p>
 
 ---
 
-## Technologies Used
+##  Features
 
-| Technology | Purpose |
+-  **City Search:** Search for cities worldwide with autocomplete suggestions.
+-  **Current Weather:** View real-time temperature and weather conditions.
+-  **7-Day Forecast:** Check daily weather predictions, including maximum and minimum temperatures.
+-  **Weather Details:** View humidity, wind speed, feels-like temperature, and UV index.
+-  **Modern UI:** Clean, minimal, and responsive dashboard design.
+-  **Skeleton Loading:** Smooth loading experience while fetching weather data.
+-  **Error Handling:** Handle unsuccessful requests and search errors.
+-  **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
+
+---
+
+##  Built With
+
+| Technology | Usage |
 |---|---|
-| React | Building the user interface |
-| Vite | Development server and build tool |
-| JavaScript (ES6+) | Application logic |
-| Tailwind CSS v4 | Styling and responsive design |
-| Lucide React | UI and weather icons |
-| HTML5 | Application structure |
-| CSS3 | Custom styling |
+| React | Component-based user interface |
+| Vite | Development environment and build tool |
+| JavaScript (ES6+) | Application logic and API integration |
+| Tailwind CSS v4 | Styling and responsive layouts |
+| Lucide React | Modern interface and weather icons |
+| HTML5 & CSS3 | Web structure and styling |
 
 ---
 
-## APIs
+##  APIs & Data Sources
 
-This project uses the free **Open-Meteo APIs** without requiring an API key.
+This application uses the free **Open-Meteo API**, with no API key required.
 
-- **Geocoding API:** Searches for cities and retrieves their geographic coordinates.
-- **Weather Forecast API:** Retrieves current weather conditions and 7-day forecasts.
+- **Geocoding API:** Search for cities and retrieve their coordinates.
+- **Weather Forecast API:** Retrieve current weather conditions and 7-day forecasts.
 
-API Documentation:
+Documentation:
 
 - [Open-Meteo Geocoding API](https://open-meteo.com/en/docs/geocoding-api)
 - [Open-Meteo Weather API](https://open-meteo.com/en/docs)
 
 ---
 
-## Project Structure
-
-```text
-today-weather/
-│
-├── public/
-│   └── weather-icons/
-│
-├── screenshots/
-│   ├── desktop.png
-│   └── mobile.png
-│
-├── src/
-│   ├── assets/
-│   │   └── images/
-│   │
-│   ├── components/
-│   │   ├── Header.jsx
-│   │   ├── SearchBar.jsx
-│   │   ├── CurrentWeather.jsx
-│   │   ├── WeatherDetails.jsx
-│   │   ├── WeeklyForecast.jsx
-│   │   ├── ForecastCard.jsx
-│   │   ├── Sidebar.jsx
-│   │   ├── WeatherSkeleton.jsx
-│   │   ├── Loading.jsx
-│   │   └── ErrorMessage.jsx
-│   │
-│   ├── services/
-│   │   ├── geocodingApi.js
-│   │   └── weatherApi.js
-│   │
-│   ├── utils/
-│   │   ├── weatherCodes.js
-│   │   └── formatDate.js
-│   │
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-│
-├── .gitignore
-├── package.json
-└── README.md
-```
-
----
-
-## Getting Started
+##  Getting Started
 
 ### Prerequisites
 
-Make sure you have installed:
-
-- [Node.js](https://nodejs.org/)
-- npm (included with Node.js)
+- Node.js
+- npm
 - Git
 
 ### Installation
@@ -126,7 +96,7 @@ Make sure you have installed:
 git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
-**2. Navigate to the project directory**
+**2. Navigate to the project folder**
 
 ```bash
 cd today-weather
@@ -144,23 +114,21 @@ npm install
 npm run dev
 ```
 
-Open the local URL displayed in your terminal, usually:
+Open the local URL provided by Vite, usually:
 
 ```text
 http://localhost:5173
 ```
 
----
+### Production Build
 
-## Build for Production
-
-To create an optimized production build:
+Create an optimized production build:
 
 ```bash
 npm run build
 ```
 
-To preview the production build locally:
+Preview the production build locally:
 
 ```bash
 npm run preview
@@ -168,27 +136,47 @@ npm run preview
 
 ---
 
-## What I Learned
+##  What I Learned
 
-While building this project, I practiced and improved my skills in:
+Building Today Weather helped me practice and improve my skills in:
 
-- Working with REST APIs using the Fetch API.
-- Understanding HTTP requests and JSON responses.
-- Handling asynchronous JavaScript with `async/await`.
-- Managing state and side effects with React Hooks.
-- Implementing city search and autocomplete functionality.
-- Organizing a React application using reusable components.
-- Creating responsive interfaces with Tailwind CSS.
+- Integrating REST APIs using the Fetch API.
+- Working with asynchronous JavaScript using `async/await`.
+- Handling HTTP responses and JSON data.
+- Managing React state and side effects with Hooks.
+- Implementing city search and autocomplete.
+- Building reusable React components.
+- Creating responsive layouts with Tailwind CSS.
 - Handling loading states and API errors.
 - Using Git and GitHub for version control.
+- Deploying a React application with Vercel.
 
 ---
 
-## Acknowledgements
+##  Deployment
 
-- [Open-Meteo](https://open-meteo.com/) for providing free weather and geocoding APIs.
-- [Lucide](https://lucide.dev/) for the icon library.
+The application is deployed on **Vercel**.
+
+<p align="center">
+  <a href="[YOUR_VERCEL_URL](https://today-weather-pi.vercel.app/)">
+    <img src="https://img.shields.io/badge/Visit_Live_App-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Visit Live App" />
+  </a>
+</p>
 
 ---
 
-**Built with React and a passion for learning web development.**
+##  Acknowledgements
+
+- [Open-Meteo](https://open-meteo.com/) — Free weather and geocoding data.
+- [Lucide](https://lucide.dev/) — Beautiful and consistent icons.
+- [Vercel](https://vercel.com/) — Application hosting and deployment.
+
+---
+
+<p align="center">
+  Made with ❤️ using React
+</p>
+
+<p align="center">
+  <strong>Today Weather</strong> — Stay informed about the weather, wherever you go.
+</p>
